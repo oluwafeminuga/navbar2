@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+body{
+    background-color: #F2E5BF;
+}
+
+.navbar{
+    height: 150px;
+    padding: 0;
+    width: 100%;
+    background-color: #A66E38;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-img{
+    height: 90px;
+    width: 90px;
+    margin-left: 10px;
+    border-radius: 50%;
+}
+.navdrop{
+    list-style: none;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+   
+}
+.menuitem{
+    position: relative;
+    margin-right: 20px;
+}
+.menuitem > a{
+    display: block;
+    padding: 10px 10px;
+    margin-right: 15px;
+    text-decoration: none;
+    color: white;
+}
+/* makes the list items change color at the point of cursor*/
+.menuitem > a:hover{
+   background-color: #06b800;
+}
+.dropdown-d {
+    list-style: none; /* Removes bullet points */
+    padding: 0;
+    margin: 0;
+    display: none; /* Hides the drop-down initially */
+    position: absolute; /* Positions it relative to its parent .menu-item */
+    top: 100%; /* Positions the top edge of the dropdown below the menu item */
+    left: -10;
+    min-width: 150px; /* Ensures a minimum width for the drop-down */
+    z-index: 1000; /* Keeps the drop-down on top of other elements */
+}
+.dropdown-d li a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+}
+.dropdown-d li a:hover{
+    background-color: #6A9AB0;
+}
+.menuitem:hover .dropdown-d {
+    display: block; /* Shows the drop-down when the parent .menu-item is hovered */
+}
